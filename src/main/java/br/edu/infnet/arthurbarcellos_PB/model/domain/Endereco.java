@@ -1,14 +1,33 @@
 package br.edu.infnet.arthurbarcellos_PB.model.domain;
 
-public class Endereco extends Model{
-	Pedido pedido;
-	String rua;
-	int numero;
-	String cidade;
-	String estado;
-	String pais;
+import jakarta.persistence.*;
+
+@Entity
+public class Endereco {
 	
-	Endereco(){}
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+	   
+    @OneToOne
+	private Pedido pedido;
+
+	private String rua;
+	private int numero;
+	private String cidade;
+	private String estado;
+	private String pais;
+	
+	public Endereco(){}
+
+	
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public Pedido getPedido() {
 		return pedido;
@@ -57,6 +76,8 @@ public class Endereco extends Model{
 	public void setPais(String pais) {
 		this.pais = pais;
 	}
+
+	
 	
 	
 }

@@ -110,7 +110,7 @@ public class Main{
 		if(!verificaLeitorEmail(email)){
 			String senha = solicitarSenha();
 			
-			Cliente cliente = new Cliente();
+			Usuario cliente = new Usuario();
 		 	cliente.setNome(nome);
 		 	cliente.setEmail(email);
 		 	cliente.setSenha(senha);
@@ -196,7 +196,7 @@ public class Main{
 		return false;	
 	}
 	
-	public static void escritor(Cliente cliente) {
+	public static void escritor(Usuario cliente) {
 		try {
 			String nome = cliente.getNome();
 			String email = cliente.getEmail();

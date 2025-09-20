@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ArthurbarcellosPbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ArthurbarcellosPbApplication.class, args);
+        SpringApplication.run(ArthurbarcellosPbApplication.class, args);
+
 	}
 
 }
